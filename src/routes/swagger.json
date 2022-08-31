@@ -1,0 +1,83 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "APIS",
+    "description": "CRUD APIs",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:4000",
+  "basePath": "/",
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/users/register": {
+      "post": {
+        "tags": ["Auth"],
+        "description": "User creation and authentication",
+        "parameters": [
+          {
+            "name": "registration",
+            "in": "body",
+            "description": "user registration",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {}
+      }
+    },
+    "/users/login": {
+      "post": {
+        "tags": ["Auth"],
+        "description": "user login",
+        "parameters": [
+          {
+            "name": "login",
+            "in": "body",
+            "description": "user login",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {}
+      }
+    },
+    "/users/list": {
+      "post": {
+        "tags": ["Auth"],
+        "description": "List users",
+        "parameters": [],
+        "produces": ["application/json"],
+        "responses": {}
+      }
+    }
+  }
+}
