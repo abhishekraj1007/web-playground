@@ -27,7 +27,7 @@ if (cluster.isMaster) {
     app.use(router);
 
     app.listen(PORT, () => {
-      console.log(`Server is listening on PORT ${PORT}`);
+      console.log(`Server is listening on PORT ${PORT}`,);
     });
   }
 
